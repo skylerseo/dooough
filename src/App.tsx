@@ -10,7 +10,7 @@ const App = (): JSX.Element => {
         return (
           <li key={key}>
             <p className='title'>{d.title}</p>
-            <img src={`/images/jjal/${d.url}`} alt='' />
+            <img src={`/images/jjal/${d.url}`} alt={d.title} />
           </li>
         )
       })}
