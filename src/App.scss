@@ -1,13 +1,17 @@
+@import './styles/typography';
+@import './styles/colors';
+
 body {
   max-width: 1440px;
   margin: 10px auto;
-  background-color: #a0c0d8;
+  background-color: $kakao_skyblue;
+  font-family: $font-main;
+  @include typography-body-2;
 
   h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    // text-align: center;
     margin: 36px 0;
     img {
       width: 72px;
@@ -15,8 +19,8 @@ body {
       margin-right: 10px;
     }
     span {
-      color: #3a1d1d;
-      font-size: 52px;
+      color: $kakao_brown;
+      @include typography-title-display-4;
     }
   }
 
@@ -26,7 +30,6 @@ body {
     justify-content: center;
     width: 240px;
     margin: 0 auto 32px;
-    font-size: 14px;
     position: relative;
 
     .search_input {
@@ -48,9 +51,9 @@ body {
       padding: 2px 10px;
       border: none;
       border-radius: 50px;
-      font-weight: 700;
-      color: #fff;
-      background-color: #f7e600;
+      font-weight: $font-weight-bold;
+      color: $white;
+      background-color: $kakao_yellow;
       cursor: pointer;
     }
   }
@@ -87,7 +90,7 @@ body {
       overflow: hidden;
       position: relative;
       transition: transform 0.3s ease-in-out;
-      box-shadow: 0 2px 4px 0 rgba(#000, 0.15);
+      box-shadow: 0 2px 4px 0 rgba($black, 0.15);
       border-radius: 20px;
       margin-bottom: 10px;
 
@@ -105,10 +108,10 @@ body {
         padding: 12px 18px;
         position: absolute;
         bottom: 0;
-        font-size: 16px;
+        @include typography-body-3;
         margin: 0;
-        color: #fff;
-        background: linear-gradient(to top, rgba(#000, 0.5), transparent);
+        color: $white;
+        background: linear-gradient(to top, rgba($black, 0.5), transparent);
       }
 
       &:hover {
@@ -117,25 +120,17 @@ body {
     }
   }
   .speech_bubble {
-    // width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 
-    // img {
-    //   width: auto;
-    //   height: 12px;
-    //   margin-right: 12px;
-    //   transform: rotate(180deg);
-    // }
     .title {
       padding: 8px 12px;
-      font-size: 16px;
-      // font-weight: 700;
+      @include typography-body-3;
       margin: 0;
       border-radius: 12px;
-      background-color: #fff;
+      background-color: $white;
       cursor: pointer;
     }
   }
