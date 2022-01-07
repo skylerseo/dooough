@@ -28,12 +28,20 @@ const App = (): JSX.Element => {
     500: 1,
   }
 
+  // jjal detail modal
+  const [jjalModal, setJjalModal] = useState(false)
+  const jjalDetailHandler = () => {
+    setJjalModal(!jjalModal)
+  }
+
   return (
     <>
-      <h1>
+      <div className='logo_and_title'>
         <img src={doooughLogo} alt='Dooough' />
-        <span>D’ooough,,!</span>
-      </h1>
+        <h1>
+          D’ooough<span>,,!</span>
+        </h1>
+      </div>
       <div className='search_container'>
         <input
           type='text'
@@ -56,10 +64,10 @@ const App = (): JSX.Element => {
             const key = `data-${i}`
             return (
               <li key={key}>
-                <div className='image_area'>
+                <button type='button' className='image_area' onClick={jjalDetailHandler}>
                   <p className='tag'>{d.tags.map((tag) => `#${tag} `)}</p>
                   <img src={`/images/jjal/${d.url}`} alt={d.title} title={d.title} />
-                </div>
+                </button>
                 <div className='speech_bubble'>
                   <p className='title'>{d.title}</p>
                 </div>

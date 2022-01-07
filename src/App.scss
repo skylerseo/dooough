@@ -8,7 +8,7 @@ body {
   font-family: $font-main;
   @include typography-body-2;
 
-  h1 {
+  .logo_and_title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,9 +18,15 @@ body {
       height: auto;
       margin-right: 10px;
     }
-    span {
+    h1 {
       color: $kakao_brown;
+      font-family: $font-fredoka-one;
       @include typography-title-display-4;
+      letter-spacing: 0.05em;
+      margin: 0;
+      span {
+        font-weight: 300;
+      }
     }
   }
 
@@ -91,7 +97,9 @@ body {
       position: relative;
       transition: transform 0.3s ease-in-out;
       box-shadow: 0 2px 4px 0 rgba($black, 0.15);
+      border: none;
       border-radius: 20px;
+      padding: 0;
       margin-bottom: 10px;
 
       img {
